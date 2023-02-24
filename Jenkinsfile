@@ -8,9 +8,9 @@ pipeline {
             }
         }
     }
-    post {
-        always {
-            notifyEndpoint(url: 'http://example.com/notifications', message: 'build finished', format: 'TEXT', contentType: 'application/json', payload: '{"key": "value"}')
-        }
-    }
+//     post {
+//         always {
+//             notifyEndpoint(url: 'http://example.com/notifications', message: 'build finished', format: 'TEXT', contentType: 'application/json', payload: '{"key": "value"}')
+//         }
+//     }
 }
