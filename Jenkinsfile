@@ -1,14 +1,15 @@
 pipeline {
-    agent {
-        node {
-            label 'maven'
-        }
-    }
+    agent any
 
     stages {
         stage('Hello') {
             steps {
                 echo 'Hello World'
+            }
+        }
+        stage('Tests') {
+            steps {
+                sh './mvnw clean test'
             }
         }
     }
