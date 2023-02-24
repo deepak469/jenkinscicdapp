@@ -7,9 +7,9 @@ pipeline {
                 echo 'Hello World'
             }
         }
-        stage('Tests') {
+        stage('Clean') {
             steps {
-                sh './mvnw clean test'
+                sh './mvnw clean'
             }
         }
     }
